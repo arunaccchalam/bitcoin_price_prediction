@@ -6,18 +6,12 @@ from tensorflow.keras.metrics import mean_absolute_error
 from tensorflow.keras.metrics import mean_squared_error
 from tensorflow.keras.metrics import mean_absolute_percentage_error
 
-df = pd.read_csv("traffic.csv")
+df = pd.read_csv("btc_prices.csv")
 df
 
-junction_1_data = df[df['Junction']==1]
-
-len(junction_1_data)
-
-vehicles_1 = junction_1_data['Vehicles'].to_numpy()
-vehicles_1 = vehicles_1[-3000:]
-len(vehicles_1)
 
 
+#assigning values for window size and horizon
 WINDOW_SIZE = 7
 HORIZON = 1
 
